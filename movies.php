@@ -38,6 +38,19 @@ class Movie {
         
         return number_format($discount_price, 2);
     }
+
+    public function print() {
+        echo "<li> <span>Titolo:</span>$this->title </li>
+                <li> <span>Regista:</span> $this->director </li>
+                <li> <span>Lingua:</span> $this->language </li>
+                <li> <span>Genere:</span> $this->genre </li>
+                <li> <span>Voto:</span> $this->rating </li>
+                <li> <span>Durata:</span> $this->duration </li>
+                <li> <span>Anno:</span> $this->year </li>
+                <li> <span>Supporto:</span> $this->support </li>
+                <li> <span>Prezzo:</span> $this->price € </li>
+                <li> <span>Prezzo Scontato del 20%: </span>{$this->discount(20)} € </li>";
+    }
 }
 
 // instance object
